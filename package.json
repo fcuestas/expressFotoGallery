@@ -1,0 +1,39 @@
+{
+  "name": "expressfotogallery",
+  "version": "1.0.0",
+  "description": "Galeria de Fotos Ausias",
+  "type": "module",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && nodemon dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcuestas/expressFotoGallery.git"
+  },
+  "keywords": [
+    "Node",
+    "fotogallery",
+    "nodo",
+    "innovatec"
+  ],
+  "author": "Ico",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fcuestas/expressFotoGallery/issues"
+  },
+  "homepage": "https://github.com/fcuestas/expressFotoGallery#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

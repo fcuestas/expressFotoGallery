@@ -1,85 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imágenes</title>
-    <!-- Agrega los estilos de Bootstrap -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* Estilo para las miniaturas */
-      .thumbnail {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-      }
-      .thumbnail.active {
-        border: 2px solid blue;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Carrousel de Imágenes</h1>
-      <!-- Barra de control de miniaturas -->
-      <div class="row mb-3">
-        <div class="col-12">
-          <% imagePaths.forEach((imagePath, index) => { %>
-          <img
-            class="thumbnail mr-2 <% if (index === 0) { %>active<% } %>"
-            src="fotos/<%= imagePath %>"
-            alt="Imagen <%= index + 1 %>"
-            data-target="#carouselExampleControls"
-            data-slide-to="<%= index %>"
-          />
-          <% }); %>
-        </div>
-      </div>
+<%- include('includes/header.ejs') %>
+</head>
+<body>
+  <!-- Barra de navegación -->
+<%- include('includes/navigation.ejs') %>
 
-      <!-- Carrusel principal -->
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <% imagePaths.forEach((imagePath, index) => { %>
-          <div class="carousel-item <% if (index === 0) { %>active<% } %>">
-            <img
-              class="d-block w-100"
-              src="fotos/<%= imagePath %>"
-              alt="Slide <%= index + 1 %>"
-            />
-          </div>
-          <% }); %>
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <h3 class="display-4 text-centered">Sopa de Letras del Ausias</h3>
+    </header>
+    <div class="row align-items-md-stretch">
+      <div class="col">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Acceso a un aula</h2>
+          <p>Introduce el identificador de aula para acceder</p>
+          <form action="/tablero/aula" method="post">
+            <div class="form-control">
+              <label for="aula_code" class="form-label">AULA-CODE: &nbsp;</label>
+              <input class=""
+                  type="text" name="aula_code" id="aula_code" value="">
+             
+              &nbsp;&nbsp;&nbsp;<button class="btn btn-primary" type="submit">Acceso Aula</button>
+            </div>
+          </form>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
-
-    <!-- Agrega los scripts de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  </div>
+  
+  <%- include('includes/footer.ejs') %>
+  <%- include('includes/end.ejs') %>

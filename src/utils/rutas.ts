@@ -7,8 +7,8 @@ const base: string = dirname(fileURLToPath(import.meta.url));
 export const rutas = {
     base: join(base,'..'),
     views: join(base,'..','views'),
-    public: join(base,'..','assets'),
-    fotos: join(base,'..','assets/fotos'),
+    public: join(base,'..','public'),
+    fotos: join(base,'..','public/fotos'),
     data: join(base,'..','data'),
     cart: join(base,'..','data'),
 }

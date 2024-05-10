@@ -16,7 +16,8 @@ app.set('views', rutas.views);
 app.use(express.static((rutas.public)));
 loggerin("Rutas cargadas: "+rutas);
 app.use('/photocall', photocallRouter);
-app.get('/',(req, res) => {res.render('index', { title: 'Home', path: '/home'})});
+//app.get('/',(req, res) => {res.render('index', { title: 'Home', path: '/home'})});
+app.get('/',(req, res) => {res.redirect('/photocall')});
 
 app.listen(PORT, () => {
   loggerin(`Servidor Express escuchando en el puerto ${PORT}`);

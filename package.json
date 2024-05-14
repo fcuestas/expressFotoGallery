@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "rsync -avz --delete src/views/ dist/views/ && rsync -avz --delete src/public/ dist/public/",
     "mon": "nodemon --trace-warnings dist/app.js",
-    "start": "npm run sync && tsc && node ./dist/app.js"
+    "start": "npm run sync && tsc && node ./dist/app.js",
+    "dockerBuild": "sudo docker build -t web_gallery .",
+    "dockerRun": "sudo docker run -d --name web -p 80:3000 -v /home/ico/Documentos/proyectosNode/expressFotoGallery/dist/public/fotos:/app/dist/public/fotos web_gallery"
   },
   "repository": {
     "type": "git",

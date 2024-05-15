@@ -1,0 +1,21 @@
+    /* Estilos adicionales */
+    .letter-cell {
+        width: 4%; /* Ajusta el ancho de la celda según tu preferencia */
+        height: auto;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 40px; /* Ajusta la altura de la celda según tu preferencia */
+        display: inline-block; /* Hace que los elementos <a> se comporten como bloques en línea */
+        text-decoration: none !important; /* Elimina la decoración de enlace */
+        font-weight: bold; /* Hace que las letras estén en negrita */
+    }
+    .odd-cell{
+      background-color: rgb(231, 252, 252);
+    }
+    .row {
+        display: flex;
+     }
+    .selected {
+        color: rgb(175, 7, 7);
+        background-color: rgb(252, 233, 233); /* Cambiar color de fondo al seleccionar */
+    }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imágenes</title>
+  </head>
+  <body>
+    <h1>Imágenes disponibles:</h1>
+    <% imagePaths.forEach(imagePath => { %>
+    <img src="./fotos/<%= imagePath %>" alt="<%=imagePath %>" /></br>
+    <% }); %>
+  </body>
+</html>
